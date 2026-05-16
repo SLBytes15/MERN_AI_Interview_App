@@ -1,0 +1,98 @@
+.Admin{
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    box-sizing: border-box;
+}
+
+.AdminHeader{
+    margin-bottom: 40px;
+}
+
+.AdminHeader h1{
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #013ff9;
+}
+
+.AdminHeader p{
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.AdminContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.adminCard{
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.adminCard:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(1, 63, 249, 0.15);
+}
+
+.cardIcon{
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.cardTitle{
+    font-size: 20px;
+    font-weight: 700;
+    color: #013ff9;
+    margin-bottom: 10px;
+}
+
+.cardDescription{
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.cardBtn{
+    padding: 10px 25px;
+    background-color: #013ff9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.cardBtn:hover{
+    background-color: #0a2fa0;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 780px) {
+    .Admin{
+        padding: 20px;
+    }
+    
+    .AdminContainer{
+        grid-template-columns: 1fr;
+    }
+    
+    .AdminHeader h1{
+        font-size: 28px;
+    }
+}

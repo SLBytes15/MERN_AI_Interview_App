@@ -1,0 +1,75 @@
+.History{
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    box-sizing: border-box;
+}
+
+.HistoryHeader{
+    margin-bottom: 40px;
+    color: white;
+}
+
+.HistoryHeader h1{
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #013ff9;
+}
+
+.HistoryHeader p{
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.HistoryContainer{
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    min-height: 500px;
+}
+
+.emptyState{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #999;
+    text-align: center;
+}
+
+.emptyIcon{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.emptyState h2{
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.emptyState p{
+    margin: 0;
+    color: #999;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 780px) {
+    .History{
+        padding: 20px;
+    }
+    
+    .HistoryContainer{
+        padding: 20px;
+    }
+    
+    .HistoryHeader h1{
+        font-size: 28px;
+    }
+}

@@ -1,34 +1,78 @@
 .sideBar {
-    flex: 0 0 20%;      /* Allocates exactly 20% of the parent width */
-    max-width: 20%;     /* Prevents it from expanding further */
-    min-width: 200px;   /* Keeps it readable on smaller screens */
-    background-color: #013ff9;   
-    color: aliceblue;
+    flex: 0 0 20%;
+    max-width: 20%;
+    min-width: 200px;
+    background: linear-gradient(180deg, #013ff9 0%, #0a2fa0 100%);
+    color: white;
     height: 100vh;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
 }
 
 .sideBarIcon {
-    padding: 20px 30px;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5;
 }
 
 .sideBarOptionalBlock{
-    margin-top: 30px;
+    margin-top: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .sideBarOption{
-    padding: 20px;
+    padding: 18px 25px;
     display: flex;
-    gap: 10px;
+    gap: 12px;
     align-items: center;
     cursor: pointer;
-    color: aliceblue;
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    margin: 5px 10px;
+    border-radius: 8px;
+}
+
+.sideBarOption:hover{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 30px;
 }
 
 .selectedOption{
-    background-color: #688dfb;   
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-left-color: white;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 780px) {
+    .sideBar {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .sideBarIcon {
+        padding: 20px;
+    }
+    
+    .sideBarOption {
+        padding: 15px 20px;
+    }
 }

@@ -3,45 +3,53 @@ import styles from "./Dashboard.module.css";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className={styles.Dashboard}>
       <div className={styles.DashboardLeft}>
         <div className={styles.DashboardHeader}>
-          Smart Resume Screening
-          <div className={styles.DashboardHeaderTitle}>
-            {" "}
-            Smart Resume Checker
-          </div>
-          <div className={styles.DashboardHeaderLargeTitle}>
-            Resume Match Score
+          <div>
+            <div className={styles.DashboardHeaderTitle}>
+              Smart Resume Screening
+            </div>
+            <div className={styles.DashboardHeaderSubtitle}>
+              AI-Powered Resume Match Score
+            </div>
           </div>
         </div>
 
         <div className={styles.alertInfo}>
-          <div>🔔 Important Instructions</div>
-          <div className={styles.dashboardInstruction}> 
-            <div>please past the complete job description in the field before submitting</div>
-            <div>only PDF format Resumes are accepted</div>
-
+          <div className={styles.alertIcon}>🔔</div>
+          <div>
+            <div className={styles.alertTitle}>Important Instructions</div>
+            <div className={styles.dashboardInstruction}> 
+              <div>• Paste the complete job description in the field</div>
+              <div>• Only PDF format resumes are accepted</div>
+            </div>
           </div>
         </div>
+
         <div className={styles.DashboardUploadResume}>
           <div className={styles.DashboardResumeBlock}>
-            Upload your Resume
-          </div>
-          <div className={styles.DashboardInputField}>
-            <label htmlFor="inputField" className={styles.analyzeAIbtn}>Upload Resume</label>
-            <input type="file" accept='.pdf' id='inputField' />
+            <div className={styles.blockTitle}>Upload your Resume</div>
+            <div className={styles.DashboardInputField}>
+              <label htmlFor="inputField" className={styles.analyzeAIbtn}>📄 Choose Resume (PDF)</label>
+              <input type="file" accept='.pdf' id='inputField' />
+            </div>
           </div>
 
-        <div className="styles jobDesc">
-        <textarea className={styles.textArea} placeholder='Paste your Job Description' rows={10} cols={50}></textarea>
-        <div className={styles.AnalyzeBtn}>Analyze</div>
+          <div className={styles.jobDescBlock}>
+            <div className={styles.blockTitle}>Job Description</div>
+            <textarea className={styles.textArea} placeholder='Paste the complete job description here...' rows={8}></textarea>
+          </div>
         </div>
-        </div>
+
+        <div className={styles.AnalyzeBtn}>🚀 Analyze Resume</div>
       </div>
 
       <div className={styles.DashboardRight}>
-        
+        <div className={styles.resultsPanel}>
+          <div className={styles.resultsTitle}>Match Results</div>
+          <div className={styles.resultsPlaceholder}>Results will appear here after analysis</div>
+        </div>
       </div>
     </div>
   );
