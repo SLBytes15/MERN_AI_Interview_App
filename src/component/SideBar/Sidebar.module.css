@@ -1,0 +1,34 @@
+.sideBar {
+    flex: 0 0 20%;      /* Allocates exactly 20% of the parent width */
+    max-width: 20%;     /* Prevents it from expanding further */
+    min-width: 200px;   /* Keeps it readable on smaller screens */
+    background-color: #013ff9;   
+    color: aliceblue;
+    height: 100vh;
+}
+
+.sideBarIcon {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideBarOptionalBlock{
+    margin-top: 30px;
+}
+
+.sideBarOption{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.selectedOption{
+    background-color: #688dfb;   
+}

@@ -1,0 +1,43 @@
+.Dashboard{
+    flex: 0.0;
+    height: 100vh;
+    overflow: auto;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+}
+
+.DashboardLeft{
+    width: 70%;
+    padding: 30px;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #e7e7e7;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.DashboardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DashboardHeaderTitle{
+    font-size: 26px;
+    font-weight: 600;
+}
+.DashboardHeaderLargeTitle{
+    font-size: 52px;
+}
+
+.dashboardInstruction{
+    margin-left: 40px;
+}
+
+input{
+    display: none;
+}
