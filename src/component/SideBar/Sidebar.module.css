@@ -32,7 +32,7 @@
     flex-direction: column;
 }
 
-.sideBarOption{
+.sideBarOption {
     padding: 18px 25px;
     display: flex;
     gap: 12px;
@@ -46,6 +46,13 @@
     border-left: 4px solid transparent;
     margin: 5px 10px;
     border-radius: 8px;
+
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    outline: none;
 }
 
 .sideBarOption:hover{

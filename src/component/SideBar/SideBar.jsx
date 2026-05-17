@@ -1,12 +1,19 @@
 import React from 'react'
 import styles from "./Sidebar.module.css"
 // import ArticleIcon from "@mui/icons-material/Article";
-import {Link, useLocation} from 'react-router-dom';
-
+import {Link, useLocation, useNavigate} from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 const SideBar = () => {
 
   const location = useLocation();
+  const navigate = useNavigate();
+  const { signOut } = useAuth();
+
+  const handleLogout = () => {
+    signOut();
+    navigate("/");
+  }
 
   return (
     <div className={styles.sideBar}>
@@ -41,7 +48,7 @@ const SideBar = () => {
         >
           Admin
         </Link>
-        <div className={styles.sideBarOption}>Logout</div>
+        <button type='button' className={styles.sideBarOption} onClick={handleLogout}>Logout</button>
       </div>
     </div>
   );
